@@ -78,7 +78,7 @@ func ConfirmPurchaseOrder(c *gin.Context) {
 	orderID := c.Param("id")
 
 	var data struct {
-		Freight float32 `json:"freight" binding:"required"`
+		Freight float32 `json:"freight"`
 	}
 	err := c.ShouldBindJSON(&data)
 	if err != nil {
